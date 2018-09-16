@@ -31,13 +31,19 @@ composer install
 ```
 sudo apt-get install php-sqlite3
 ```
+## Running the tests
 
+You can run the tests by this command:
+```
+vendor/bin/phpunit tests
+```
 ## Built With
 
 * [Silex](http://silex.sensiolabs.org/) - The web framework used
 * [Composer](https://getcomposer.org/) - Dependency Management
 * [Twig](http://twig.sensiolabs.org/) - Php template engine
 * [Doctrine DBAL](http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/index.html) - Database connection
+* [PHPUnit](https://phpunit.de/) - PHP testing framework
 
 ## Versioning
 
