@@ -9,7 +9,7 @@ use Silex\Provider\FormServiceProvider;
 use Silex\Provider\LocaleServiceProvider;
 use Silex\Provider\TranslationServiceProvider;
 use BookingApp\Controllers\CreateBookingController;
-
+use BookingApp\Controllers\ListBookingsController;
 /**
  * Custom Application class that hold our application specifix functionality.
  */
@@ -86,6 +86,7 @@ class Application extends SilexApplication
 		$this['twig'],
 		$this['db']
 	))->method('GET|POST');
+	$this->get('/bookings', new ListBookingsController($this['db'], $this['twig']));
     }
 }
 
